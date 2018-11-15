@@ -33,8 +33,13 @@ public class AccountController {
         List<Account> accountList = accountService.findAll();
         //存放到request域
         model.addAttribute("list", accountList);
+        System.out.println("1231231");
         return "list";
+
     }
+
+
+
 
     /**
      * 保存

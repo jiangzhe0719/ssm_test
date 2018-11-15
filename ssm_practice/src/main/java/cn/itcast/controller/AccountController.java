@@ -33,6 +33,7 @@ public class AccountController {
         List<Account> accountList = accountService.findAll();
         //存放到request域
         model.addAttribute("list", accountList);
+        System.out.println("23123123123123123123");
         return "list";
 
     }
@@ -50,6 +51,11 @@ public class AccountController {
         System.out.println("表现层：保存账户...");
         accountService.saveAccount(account);
         return "redirect:findAll";
+    }
+
+
+    public void hello(){
+        System.out.println("hello");
     }
 
 

@@ -27,13 +27,12 @@ public class AccountController {
 
     @RequestMapping("findAll")
     public String findAll(Model model){
-
+        System.out.println("123123123123");
         System.out.println("表现层：查询所有账户...");
         // 调用service的方法
         List<Account> accountList = accountService.findAll();
         //存放到request域
         model.addAttribute("list", accountList);
-        System.out.println("1231231");
         return "list";
 
     }
